@@ -1,0 +1,30 @@
+package FileWriter_FileReader;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+/**
+ * 2.3 Crea una clase de Java que cree ‘n’ archivos, nombre1.txt, nombre2.txt,....
+ * nombreN.txt. El contenido de cada archivo contendrá la frase
+ * “Este es el fichero nombreN.txt”.
+ */
+public class Ejercicio23 {
+    public static void main(String[] args) throws IOException {
+        // datos principales
+        int numArchivos = 10;
+
+        // Por cada archivo
+        for(int i=0; i<10; i++) {
+            // Creamos el archivo
+            FileWriter fileWriter = new FileWriter(("carpeta14/nombre"+i+".txt"));
+
+            // Cargamos su contenido
+            fileWriter.write("Este es el fichero nombre"+i+".txt");
+
+            // Cerramos el archivo
+            fileWriter.close();
+
+        }
+
+    }
+}
