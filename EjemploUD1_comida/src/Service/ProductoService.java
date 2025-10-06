@@ -9,7 +9,7 @@ import java.util.List;
 public class ProductoService {
 
     ProductoRepository productoRepository;
-    // Categoria Repositoru
+    // Categoria Repository
 
     public ProductoService(ProductoRepository productoRepository) {
         this.productoRepository = productoRepository;

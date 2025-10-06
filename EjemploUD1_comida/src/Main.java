@@ -3,12 +3,20 @@ import Repository.ProductoRepository;
 import Service.ProductoService;
 import Vista.Consola;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // Declaro el modo que voy a utilizar para guardar la infomracion
-        final String modoGuardado = "CSV";
+        Properties properties= new Properties();
+        properties.load(new FileInputStream(new File("persistencia.properties")));
+        String modoGuardado = properties.get("modo").toString();
+        System.out.println("Se ha elegido el modo de guardado: "+modoGuardado);
 
         // Declaro el repositorio sin inicializar (hago referencia a la interface)
         ProductoRepository pRepository;
