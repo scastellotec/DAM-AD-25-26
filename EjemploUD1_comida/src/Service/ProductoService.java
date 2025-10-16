@@ -10,6 +10,7 @@ public class ProductoService {
 
     ProductoRepository productoRepository;
     // Categoria Repository
+    //CategoriaRepository .....
 
     public ProductoService(ProductoRepository productoRepository) {
         this.productoRepository = productoRepository;
