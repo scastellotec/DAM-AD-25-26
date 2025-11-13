@@ -15,7 +15,10 @@ public class Main {
             String nombreUsuario = "usuario1@ejemplo.com";
             // Ejemplos SQL inyection
             String passUsuario = "12345' OR '1'='1";
+
             String sqlQuery = "SELECT * FROM usuarios WHERE email ='"+nombreUsuario+"' and contrasena = '"+passUsuario+"' ";
+            System.out.println("Estamos ejecutando esta sentencia: ");
+            System.out.println(sqlQuery);
 
             // Ejecuto y recojo resultado
             Statement st = con.createStatement();
